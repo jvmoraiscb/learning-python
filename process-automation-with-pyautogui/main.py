@@ -4,7 +4,7 @@ import time
 
 pyautogui.PAUSE = 1
 
-# Passo 1: Entrar no sistema (no nosso caso, entrar no link)
+# Passo 1: Entrar no sistema (no nosso caso, entrar no link!)
 pyautogui.hotkey("ctrl", "t")
 pyautogui.write(r"https://drive.google.com/drive/u/2/folders/149xknr9JvrlEnhNWO49zPcw0PW5icxga")
 pyautogui.press("enter")

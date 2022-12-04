@@ -1,5 +1,7 @@
 # Autores: João Victor Morais e Talles Cavalleiro Weiler
 
+# Originalmente feito em jupyter notebook
+
 # Bibliotecas
 import numpy as np
 import matplotlib.pyplot as plt
