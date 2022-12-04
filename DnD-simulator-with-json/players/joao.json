@@ -1,0 +1,9 @@
+{
+  "name": "Joao",
+  "strength": 7,
+  "dexterity": 5,
+  "armor": "plate",
+  "weapon": "battleaxe",
+  "shield": true,
+  "HP": 100
+}

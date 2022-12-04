@@ -1,0 +1,9 @@
+{
+  "name": "Marina",
+  "strength": 10,
+  "dexterity": 20,
+  "armor": "leather",
+  "weapon": "dagger",
+  "shield": false,
+  "HP": 65
+}
