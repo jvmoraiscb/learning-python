@@ -1,6 +1,5 @@
 import sys
 import character as cr
-import random
 
 def main():
     try:
