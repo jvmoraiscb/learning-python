@@ -1,0 +1,9 @@
+{
+  "name": "Talles",
+  "strength": 18,
+  "dexterity": 12,
+  "armor": "half plate",
+  "weapon": "longsword",
+  "shield": true,
+  "HP": 75
+}

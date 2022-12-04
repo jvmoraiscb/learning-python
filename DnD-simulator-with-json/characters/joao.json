@@ -1,0 +1,9 @@
+{
+  "name": "Joao",
+  "strength": 18,
+  "dexterity": 12,
+  "armor": "plate",
+  "weapon": "greatsword",
+  "shield": true,
+  "HP": 100
+}

@@ -1,0 +1,9 @@
+{
+  "name": "Celso",
+  "strength": 10,
+  "dexterity": 20,
+  "armor": "half plate",
+  "weapon": "rapier",
+  "shield": false,
+  "HP": 100
+}
