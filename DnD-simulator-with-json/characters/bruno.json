@@ -1,9 +1,0 @@
-{
-  "name": "Bruno",
-  "strength": 18,
-  "dexterity": 12,
-  "armor": "plate",
-  "weapon": "longsword",
-  "shield": true,
-  "HP": 100
-}
