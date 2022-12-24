@@ -93,10 +93,9 @@ def atualizaDamas(tabuleiro):
 
 def converteJogada(jogada):     # converte string para posição do tabuleiro
     if len(jogada) == 2:
-        jogada[1].lower()
-        if (ord(jogada[0]) >= ord("1") and ord(jogada[0]) <= ord("8")) and (ord(jogada[1]) >= ord("a") and ord(jogada[1]) <= ord("h")):
-            return int(jogada[0]) - 1, ord(jogada[1]) - 96 - 1  # posição válida
-    return -1, -1                                               # posição inválida
+        if (ord(jogada[0]) >= ord("1") and ord(jogada[0]) <= ord("8")) and (ord(jogada[1].lower()) >= ord("a") and ord(jogada[1].lower()) <= ord("h")):
+            return int(jogada[0]) - 1, ord(jogada[1].lower()) - 96 - 1  # posição válida, valor ascii "a" == 97
+    return -1, -1                                                       # posição inválida
 
 def desconverteJogada(i, j):    # converte posição do tabuleiro para string
     return str(i+1) + chr(j+1+96)
@@ -108,9 +107,9 @@ def verificaPeca(i, j, tabuleiro, peca):
         return False
 
 def pecaPodeSeMover(i, j, tabuleiro, jogador):
-    if jogador == "a":                                                                     # Jogador A #
+    if jogador == "a":                                                                  # Jogador A #
 
-        if tabuleiro[i][j] == "a":                                                                 # peça normal #
+        if tabuleiro[i][j] == "a":                                                      # peça normal #
             if (i+1 <= 7 and j+1 <= 7):                                                 # pode mover para frente/direita
                 if (tabuleiro[i+1][j+1] == "o"):
                     return True
@@ -125,7 +124,7 @@ def pecaPodeSeMover(i, j, tabuleiro, jogador):
                     return True
             return False                                                                # não pode mover
 
-        if tabuleiro[i][j] == "A":                                                                 # dama #
+        if tabuleiro[i][j] == "A":                                                      # dama #
             if (i+1 <= 7 and j+1 <= 7):                                                 # pode mover para frente/direita
                 if (tabuleiro[i+1][j+1] == "o"):
                     return True
@@ -152,9 +151,9 @@ def pecaPodeSeMover(i, j, tabuleiro, jogador):
                     return True
             return False                                                                # não pode mover
 
-    if jogador == "b":                                                             # Jogador B #
+    if jogador == "b":                                                                  # Jogador B #
 
-        if tabuleiro[i][j] == "b":                                                                 # peça normal #
+        if tabuleiro[i][j] == "b":                                                      # peça normal #
             if (i-1 >= 0 and j-1 >= 0):                                                 # pode mover para frente/direita
                 if (tabuleiro[i-1][j-1] == "o"):
                     return True
@@ -169,7 +168,7 @@ def pecaPodeSeMover(i, j, tabuleiro, jogador):
                     return True
             return False                                                                # não pode mover
     
-        if tabuleiro[i][j] == "B":                                                                 # dama #
+        if tabuleiro[i][j] == "B":                                                      # dama #
             if (i-1 >= 0 and j-1 >= 0):                                                 # pode mover para frente/direita
                 if (tabuleiro[i-1][j-1] == "o"):
                     return True
@@ -247,7 +246,7 @@ def retornaPosicoesDisponiveis(i, j, tabuleiro, jogador):
                 if (tabuleiro[i-1][j+1] == "o"):
                     str += desconverteJogada(i-1, j+1) + " "
 
-    if jogador == "b":                                                             # Jogador B #
+    if jogador == "b":                                                                  # Jogador B #
 
         if tabuleiro[i][j] == "b":                                                                 # peça normal #
             if (i-2 >= 0 and j-2 >= 0):                                                 # pode comer peca para frente/esquerda
